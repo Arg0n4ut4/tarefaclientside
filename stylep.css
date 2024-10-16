@@ -1,0 +1,273 @@
+/*cores utilizadas
+#F0F5F5
+#2F4F4F
+#D32F2F
+#a72525
+
+*/
+
+/* Estilos padrões (desktops) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui borda e padding no cálculo da largura e altura */
+}
+
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 1fr 10vh;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/*headerconfigs*/
+.header{
+    background-color: #F0F5F5;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 0.6px solid #2F4F4F;
+    position: relative;
+}
+
+.search{
+    width: 15%;
+    height: 90%;
+    right:41.5%;
+    top: 10%%;
+    position: relative;
+    
+    
+}
+
+.homelink{
+    right: 15%;
+    top: 50%;
+    position: absolute;
+    font-family: 'Hammersmith One', sans-serif;
+    user-select: none;
+
+}
+
+.detailsperfil{
+    right: 6%;
+    position: absolute;
+    font-family: 'Hammersmith One', sans-serif;
+    height: 15vh;
+    width: 6vw;
+    top: 51%;
+    
+}
+
+.detailsperfil summary{
+    cursor: pointer;
+    user-select: none;
+}
+
+.funddet {
+    background-color: #F0F5F5; /* Cor de fundo popup */
+      padding: 20px; /* Espaçamento interno */
+      border-radius: 10px; /* Arredondamento dos cantos */
+      border: 1px solid #2F4F4F ;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar efeito de popup */
+      position: absolute;
+      top: 50px; /* Ajuste a posição conforme necessário */
+      z-index: 1;
+      width: 200px; /* Defina a largura desejada */
+}
+
+.funddet a{
+    display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      padding: 8px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Tipografia padrão */
+    font-size: 16px; /* Tamanho de fonte básico */
+    color: #2F4F4F; /* Cor de texto legível */
+    background-color: #F0F5F5; /* Cor de fundo suave */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Previne rolagem horizontal indesejada */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* O corpo da página ocupará no mínimo 100% da altura da janela */
+}
+
+main {
+    flex: 1; /* Faz com que o conteúdo principal ocupe o máximo possível */
+    overflow: hidden; /* Impede o conteúdo de transbordar */
+    width: 100%; /* Garante que o main ocupe toda a largura disponível */
+    position: relative;
+  }
+
+html, body {
+    height: 100%; /* Garante que o body ocupe 100% da altura da tela */
+    margin: 0;
+  }
+
+
+p {
+    margin-bottom: 1.5em; /* Espaçamento entre parágrafos */
+    color: #2F4F4F;
+}
+
+a{
+    text-decoration: none;
+    color: #2F4F4F;
+}
+
+a:hover {
+    color: #D32F2F; /* Cor dos links ao passar o mouse */
+  }
+
+
+
+
+
+
+.slider {
+    width: 100%; /* Define a largura do slider para 100% do contêiner pai */
+    height: 900px; /* Ajuste a altura conforme necessário */
+    overflow: hidden; /* Impede o conteúdo de transbordar */
+    position: relative; /* Necessário para elementos posicionados dentro */
+}
+
+.slider object {
+    width: 100%; /* Garante que o objeto preencha completamente o slider */
+    height: 100%; /* Garante que o objeto preencha completamente o slider */
+    border: none; /* Remove qualquer borda padrão */
+}
+
+.tamslider{
+    width: 80%; /* Ajuste a largura conforme necessário */
+    height: auto; /* Defina a altura como automática */
+    min-height: 600px; /* Defina uma altura mínima se necessário */
+    margin: 0 auto; /* Centraliza o slider na página */
+    padding: 0; /* Remova o padding, se não for necessário */
+    position: relative; /* Necessário para elementos posicionados dentro */
+    overflow: hidden; /* Garante que nada transborde o contêiner */
+    position: relative;
+    left: -22vw;
+    padding: 120px;
+}
+
+.sempro{
+    position: absolute;
+    right:18%;
+    top: 14%;
+
+}
+
+.sempro p{
+    color: #2F4F4F;
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Peso em negrito da fonte */
+}
+
+
+/*formulario*/
+
+.consent{
+    width: 100%; /* Ajuste a largura conforme necessário */
+    height: auto; /* Defina a altura como automática */
+    min-height: 600px; /* Defina uma altura mínima se necessário */
+    margin: 0 auto; /* Centraliza o slider na página */
+    padding: 0; /* Remova o padding, se não for necessário */
+    position: relative; /* Necessário para elementos posicionados dentro */
+    overflow: hidden; /* Garante que nada transborde o contêiner */
+    position: relative;
+    left: 20vw;
+    top: -89vh; 
+}
+
+.form{
+    width: 100%; /* Define a largura do slider para 100% do contêiner pai */
+    height: 630px; /* Ajuste a altura conforme necessário */
+    overflow: hidden; /* Impede o conteúdo de transbordar */
+    position: relative; /* Necessário para elementos posicionados dentro */
+}
+
+.form object{
+    width: 100%; /* Garante que o objeto preencha completamente o slider */
+    height: 100%; /* Garante que o objeto preencha completamente o slider */
+    border: none; /* Remove qualquer borda padrão */
+}
+
+
+
+
+
+
+
+  footer {
+    width: 100%; /* O footer sempre terá 100% da largura da tela */
+    background-color: #F0F5F5; /* Cor de fundo para o footer */
+    color: white; /* Cor do texto no footer */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    padding: 20px 0; /* Adiciona padding para dar espaço dentro do footer */
+    padding-top: 140px; /* Espaçamento no topo do footer */
+    padding-bottom: 140px;
+    border-top: 0.6px solid #2F4F4F; /* Borda superior */
+  }
+
+  .footer-columns {
+    columns: 200px 2; /* COR DESTACADA: Duas colunas com largura mínima de 200px */
+    column-gap: 30px; /* COR DESTACADA: Espaço entre as colunas */
+    padding: 0 25px; /* Padding nas laterais para manter o layout consistente */
+    font-family: 'Hammersmith One', sans-serif; /* Mudar para a fonte */
+    font-size: larger;
+    font-weight: 600;
+  }
+  
+  .footer-columns div {
+    break-inside: avoid; /* Impede que um item quebre entre as colunas */
+    margin-bottom: 20px; /* Espaço entre os itens do footer */
+    color: #2F4F4F;
+  }
+
+
+
+/* Para telas de até 600px (telefones) */
+@media (max-width: 600px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Inclui borda e padding no cálculo da largura e altura */
+    }
+
+    .footer-columns {
+        columns: 150px 1; /* COR DESTACADA: Em telas menores, muda para uma coluna */
+      }
+
+}
+
+/* Para telas de até 1024px (tablets) */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Inclui borda e padding no cálculo da largura e altura */
+    }
+
+    .footer-columns {
+        columns: 180px 2; /* COR DESTACADA: Em telas médias, define duas colunas */
+      }
+}
+

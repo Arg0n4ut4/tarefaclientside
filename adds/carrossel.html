@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens (Apenas HTML e CSS)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Altura total da viewport */
+            background-color: #f0f0f0; /* Cor de fundo opcional */
+        }
+
+        .carousel-container {
+            width: 60%; /* Reduz a largura do contêiner do carrossel */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            width: 500%; /* Mantém a largura proporcional para 5 slides */
+            transition: transform 0.5s ease;
+        }
+
+        .carousel img {
+            width: 20%; /* Cada imagem ainda ocupa 20% do carrossel */
+            height: auto;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .carousel-navigation {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-navigation label {
+            cursor: pointer;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+        #slide1:checked ~ .carousel {
+            transform: translateX(0);
+        }
+
+        #slide2:checked ~ .carousel {
+            transform: translateX(-20%);
+        }
+
+        #slide3:checked ~ .carousel {
+            transform: translateX(-40%);
+        }
+
+        #slide4:checked ~ .carousel {
+            transform: translateX(-60%);
+        }
+
+        #slide5:checked ~ .carousel {
+            transform: translateX(-80%);
+        }
+
+        .carousel-navigation label:hover,
+        input[type="radio"]:checked + label {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+        <input type="radio" name="carousel" id="slide4">
+        <input type="radio" name="carousel" id="slide5">
+
+        <div class="carousel">
+            <img src="https://via.placeholder.com/800x400/FF0000/FFFFFF?text=Slide+1" alt="Slide 1">
+            <img src="https://via.placeholder.com/800x400/00FF00/FFFFFF?text=Slide+2" alt="Slide 2">
+            <img src="https://via.placeholder.com/800x400/0000FF/FFFFFF?text=Slide+3" alt="Slide 3">
+            <img src="https://via.placeholder.com/800x400/FFFF00/FFFFFF?text=Slide+4" alt="Slide 4">
+            <img src="https://via.placeholder.com/800x400/FF00FF/FFFFFF?text=Slide+5" alt="Slide 5">
+        </div>
+
+        <div class="carousel-navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+        </div>
+    </div>
+
+</body>
+</html>
